@@ -26,4 +26,6 @@ urlpatterns = [
     path('services/', views.service, name='service'),
     path('projects/', views.project, name='project'),
     path('feature/', views.feature, name='feature'),
+    path('team/', views.team, name='team'),
+    path('submit_contact_query/', views.submit_contact_query, name='submit_contact_query'),
 ]
