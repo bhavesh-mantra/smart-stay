@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome - Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      max-width: 1100px;
+      height: 600px;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Left Side - Welcome */
+    .left {
+      flex: 1;
+      background: linear-gradient(135deg, #8B5AED 0%, #F95F62 100%);
+      padding: 60px 50px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .left h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .left p {
+      font-size: 16px;
+      line-height: 1.7;
+      opacity: 0.9;
+    }
+
+    /* Decorative Shapes */
+    .shapes {
+      position: absolute;
+      bottom: -50px;
+      left: -80px;
+      opacity: 0.8;
+    }
+
+    .shape {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50px;
+      transform: rotate(30deg);
+    }
+
+    .shape1 { width: 300px; height: 100px; bottom: 80px; left: 50px; }
+    .shape2 { width: 250px; height: 90px; bottom: 140px; left: 120px; }
+    .shape3 { width: 280px; height: 95px; bottom: 200px; left: 20px; }
+    .shape4 { width: 200px; height: 80px; bottom: 260px; left: 100px; }
+
+    /* Right Side - Login Form */
+    .right {
+      flex: 1;
+      padding: 60px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: white;
+    }
+
+    .right h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #333;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .input-wrapper {
+      position: relative;
+    }
+
+    .input-wrapper input {
+      width: 100%;
+      padding: 15px 20px 15px 50px;
+      border: 1px solid #ddd;
+      border-radius: 50px;
+      font-size: 16px;
+      outline: none;
+      transition: all 0.3s;
+    }
+
+    .input-wrapper input:focus {
+      border-color: #8B5AED;
+      box-shadow: 0 0 0 3px rgba(139, 90, 237, 0.15);
+    }
+
+    .input-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #aaa;
+      font-size: 18px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .checkbox input {
+      accent-color: #8B5AED;
+    }
+
+    .forgot {
+      color: #8B5AED;
+      text-decoration: none;
+    }
+
+    .forgot:hover {
+      text-decoration: underline;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(135deg, #8B5AED 0%, #F95F62 100%);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .login-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+        max-width: 500px;
+      }
+      .left, .right {
+        flex: none;
+      }
+      .left {
+        padding: 50px 40px;
+        text-align: center;
+      }
+      .right {
+        padding: 50px 40px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .left h1 { font-size: 34px; }
+      .left, .right {
+        padding: 40px 30px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left Section -->
+    <div class="left">
+      <h1>Welcome to website</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod 
+        tincidunt ut laoreet dolore magna aliquam erat volutpat.
+      </p>
+
+      <div class="shapes">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+        <div class="shape shape4"></div>
+      </div>
+    </div>
+
+    <!-- Right Section - Login Form -->
+    <div class="right">
+      <h2>USER LOGIN</h2>
+      <form>
+        <div class="form-group">
+          <div class="input-wrapper">
+            <i class="fas fa-user input-icon"></i>
+            <input type="text" placeholder="Username" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-wrapper">
+            <i class="fas fa-lock input-icon"></i>
+            <input type="password" placeholder="Password" required />
+          </div>
+        </div>
+
+        <div class="options">
+          <label class="checkbox">
+            <input type="checkbox" />
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="forgot">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">LOGIN</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -24,6 +24,9 @@ def feature(request):
 def team(request):
     return render(request,'stay/team.html')
 
+def login(request):
+    return render(request, 'stay/login.html')
+
 
 def submit_contact_query(request):
 
